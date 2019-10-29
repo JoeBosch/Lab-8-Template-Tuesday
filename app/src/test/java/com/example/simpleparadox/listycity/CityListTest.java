@@ -93,4 +93,13 @@ class CityListTest {
 
         assertEquals(1, cityList.countCities());
     }
+
+    @Test
+    void testCityDistance() {
+        CityList cityList = mockCityList();
+        cityList.delete(cityList.getCities().get(0));
+        cityList.add(new City("Edmonton", "AB"));
+        cityList.add(new City("Edmonton", "AB"));
+        assertEquals(0,cityList.getCities().get(0).distanceTo(cityList.getCities().get(1)));
+    }
 }
