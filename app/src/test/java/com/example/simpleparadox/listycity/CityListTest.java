@@ -98,8 +98,8 @@ class CityListTest {
     void testCityDistance() {
         CityList cityList = mockCityList();
         cityList.delete(cityList.getCities().get(0));
-        cityList.add(new City("Edmonton", "AB"));
-        cityList.add(new City("Edmonton", "AB"));
+        cityList.add(new City("Edmonton", "AB", 100, 100));
+        cityList.add(new City("St Albert", "AB", 100, 100));
         assertEquals(0,cityList.getCities().get(0).distanceTo(cityList.getCities().get(1)));
     }
 }
